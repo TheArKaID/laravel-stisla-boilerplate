@@ -1,3 +1,8 @@
+### Stisla with Livewire?
+- It's actually weird to use Livewire, since Stisla still use Bootstrap 4 with jQuery. 
+- Livewire still in Beta 9
+
+
 <p align="center">
   <a href="https://getstisla.com">
     <img src="https://avatars2.githubusercontent.com/u/45754626?s=75&v=4" alt="Stisla logo" width="75" height="75">
