@@ -53,6 +53,13 @@ window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+// For Development Only
+// import RefreshRuntime from 'http://localhost:5173/@react-refresh'
+// RefreshRuntime.injectIntoGlobalHook(window)
+// window.$RefreshReg$ = () => {}
+// window.$RefreshSig$ = () => (type) => type
+// window.__vite_plugin_react_preamble_installed__ = true
+
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

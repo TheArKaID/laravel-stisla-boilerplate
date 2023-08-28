@@ -9,3 +9,5 @@ import '../sass/app.scss'
 import '../css/stisla/style.css';
 import '../css/stisla/components.css';
 import '../css/stisla/custom.css';
+
+import './main'
