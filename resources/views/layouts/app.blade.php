@@ -14,13 +14,11 @@
 <body>
     <div id="app">
         <div class="main-wrapper">
-            @include('components.header')
-
-            @include('components.sidebar')
-
+            <main-header></main-header>
+            <sidebar></sidebar>
+    
             @yield('main')
-
-            @include('components.footer')
+            <main-footer></main-footer>
         </div>
     </div>
 
