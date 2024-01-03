@@ -1,6 +1,5 @@
 ### Stisla with Livewire?
-- It's actually weird to use Livewire, since Stisla still use Bootstrap 4 with jQuery. 
-- Livewire still in Beta 9
+- It's actually weird to use Livewire, since Stisla still use Bootstrap 4 with jQuery.
 
 
 <p align="center">
