@@ -1,14 +1,14 @@
 {
     "private": true,
     "scripts": {
-        "dev": "vite",
-        "build": "vite build"
+        "dev": "bunx --bun vite",
+        "build": "bunx --bun vite build"
     },
     "type": "module",
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.7.2",
         "@popperjs/core": "^2.11.6",
-        "axios": "^1.1.2",
+        "axios": "^1.6.4",
         "bootstrap": "^4.2.1",
         "bootstrap-colorpicker": "^3.0.3",
         "bootstrap-daterangepicker": "^3.0.3",
@@ -33,7 +33,7 @@
         "jquery-ui-dist": "^1.12.1",
         "jquery.nicescroll": "^3.7.6",
         "jqvmap": "github:10bestdesign/jqvmap",
-        "laravel-vite-plugin": "^0.8.0",
+        "laravel-vite-plugin": "^1.0",
         "lodash": "^4.17.19",
         "moment": "^2.24.0",
         "nicescroll": "^3.7.4",
@@ -50,7 +50,7 @@
         "summernote": "^0.8.11",
         "sweetalert": "^2.1.2",
         "tooltip.js": "^1.3.1",
-        "vite": "^4.4.9",
+        "vite": "^5.0",
         "weathericons": "^2.1.0"
     }
 }
