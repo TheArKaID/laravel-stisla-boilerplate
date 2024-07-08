@@ -5,6 +5,7 @@ import $ from 'jquery';
 window.$ = window.jQuery = $;
 
 import "bootstrap";
+import "bootstrap-social";
 import "jquery.nicescroll";
 
 // These packages are required by the template, please consult the documentation of each package for more information
