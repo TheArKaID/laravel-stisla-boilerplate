@@ -1,3 +1,6 @@
+## Why laravel/ui?
+I know that laravel/ui looks more like an abandoned package that didn't have the heart to throw away. But since Stisla uses Bootstrap as its main CSS framework, it's better to use laravel/ui instead of laravel/breeze that uses Tailwind CSS as its main CSS framework. So it would be hard to utilize laravel/breeze with Stisla, better to find another boilerplate that uses Tailwind CSS as its main CSS framework.
+
 ***Laravel Stisla*** This is a Laravel Boilerplate that implementing Stisla Admin Template. The original Stisla Admin Template is created by [Nauval](http://nauv.al) ([Twitter](https://twitter.com/mhdnauvalazhar)).
 
 ---
