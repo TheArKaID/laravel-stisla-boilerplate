@@ -28,12 +28,12 @@
                         class="search-close"><i class="fas fa-times"></i></a>
                 </div>
                 <div class="search-item">
-                    <a href="#">Kodinger.com</a>
+                    <a href="#">#Stisla</a>
                     <a href="#"
                         class="search-close"><i class="fas fa-times"></i></a>
                 </div>
                 <div class="search-item">
-                    <a href="#">#Stisla</a>
+                    <a href="https://github.com/TheArKaID">Github TheArKa</a>
                     <a href="#"
                         class="search-close"><i class="fas fa-times"></i></a>
                 </div>
