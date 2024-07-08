@@ -25,6 +25,7 @@ import "jquery.nicescroll";
 // import "bootstrap-colorpicker";
 // import "bootstrap-timepicker";
 // import "bootstrap-tagsinput";
+// import "bootstrap-social";
 // import "select2";
 // import "selectric";
 // import "codemirror";
