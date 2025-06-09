@@ -28,12 +28,12 @@
                         class="search-close"><i class="fas fa-times"></i></a>
                 </div>
                 <div class="search-item">
-                    <a href="#">Kodinger.com</a>
+                    <a href="#">#Stisla</a>
                     <a href="#"
                         class="search-close"><i class="fas fa-times"></i></a>
                 </div>
                 <div class="search-item">
-                    <a href="#">#Stisla</a>
+                    <a href="https://github.com/TheArKaID">Github TheArKa</a>
                     <a href="#"
                         class="search-close"><i class="fas fa-times"></i></a>
                 </div>
@@ -267,10 +267,13 @@
                     <i class="fas fa-cog"></i> Settings
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#"
-                    class="dropdown-item has-icon text-danger">
+                <a href="#" class="dropdown-item has-icon text-danger"
+                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                     <i class="fas fa-sign-out-alt"></i> Logout
                 </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </div>
         </li>
     </ul>
