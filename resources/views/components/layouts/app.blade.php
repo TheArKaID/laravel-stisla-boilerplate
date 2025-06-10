@@ -18,7 +18,7 @@
 
             @include('components.sidebar')
 
-            @yield('main')
+            {{ $slot }}
 
             @include('components.footer')
         </div>

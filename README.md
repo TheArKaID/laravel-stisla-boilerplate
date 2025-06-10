@@ -1,3 +1,6 @@
+### Stisla with Livewire?
+- It's actually weird to use Livewire, since Stisla still use Bootstrap 4 with jQuery.
+
 ***Laravel Stisla*** This is a Laravel Boilerplate that implementing Stisla Admin Template. The original Stisla Admin Template is created by [Nauval](http://nauv.al) ([Twitter](https://twitter.com/mhdnauvalazhar)).
 
 ---
