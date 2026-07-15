@@ -1,1 +1,30 @@
 @import "tailwindcss";
+@import "@stisla/style/theme.css";
+
+@theme {
+  --color-background: oklch(0.9272 0.0116 257.69);
+}
+
+:root {
+  @variant dark {
+    --color-background: oklch(0.08 0 0);
+  }
+}
+
+@import "@stisla/style/components.css";
+
+@import "./meridian/utilities.css";
+@import "./meridian/content.css";
+@import "./meridian/shell.css";
+@import "./meridian/sidebar.css";
+@import "./meridian/page.css";
+@import "./meridian/sticky-bar.css";
+@import "./meridian/input-group.css";
+@import "./meridian/media.css";
+@import "./meridian/stat.css";
+@import "./meridian/order.css";
+@import "./meridian/charts.css";
+@import "./meridian/auth.css";
+@import "./meridian/error.css";
+
+@source "../views/**/*.blade.php";
