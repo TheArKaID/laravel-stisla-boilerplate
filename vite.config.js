@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import path from 'path';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
     plugins: [
@@ -11,11 +11,6 @@ export default defineConfig({
             ],
             refresh: true,
         }),
+        tailwindcss(),
     ],
-    resolve:{
-        alias:{
-            '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
-            '~fontawesome': path.resolve(__dirname, 'node_modules/@fortawesome')
-        }
-    }
 });
