@@ -32,16 +32,10 @@
     <div class="app-shell" data-stisla-app-shell data-stisla-app-shell-auto-collapse="true">
         @include('components.sidebar')
 
-        <div class="app-shell__backdrop" data-stisla-app-shell-toggle="collapse" hidden></div>
-
         <main class="app-shell__main">
             @include('components.header')
 
-            <div class="page content">
-                <div class="content__container">
-                    @yield('main')
-                </div>
-            </div>
+            @yield('main')
         </main>
     </div>
 
