@@ -31,6 +31,12 @@
     apply(root.dataset.theme === 'dark' ? 'light' : 'dark');
   });
 
-  // Sync the toggle glyph to whatever the head guard already applied.
-  apply(root.dataset.theme || 'light');
+  function syncTheme() {
+    var theme = localStorage.getItem('stisla-theme') || 'light';
+    apply(theme);
+  }
+
+  // Sync on page load and on Livewire navigation transitions
+  syncTheme();
+  document.addEventListener('livewire:navigated', syncTheme);
 })();

@@ -20,56 +20,63 @@
     Array.prototype.forEach.call(list, fn);
   }
 
-  function setup(root) {
-    var selectAll = root.querySelector('[data-select-all]');
-    var bulkbar = root.querySelector('[data-bulkbar]');
+  function initTableSelect() {
+    function setup(root) {
+      var selectAll = root.querySelector('[data-select-all]');
+      var bulkbar = root.querySelector('[data-bulkbar]');
 
-    function rows() {
-      return root.querySelectorAll('[data-select-row]');
-    }
+      function rows() {
+        return root.querySelectorAll('[data-select-row]');
+      }
 
-    function sync() {
-      var boxes = rows();
-      var checked = 0;
-      each(boxes, function (box) {
-        var tr = box.closest('tr');
-        if (box.checked) {
-          checked++;
-          if (tr) tr.setAttribute('data-state', 'active');
-        } else if (tr) {
-          tr.removeAttribute('data-state');
+      function sync() {
+        var boxes = rows();
+        var checked = 0;
+        each(boxes, function (box) {
+          var tr = box.closest('tr');
+          if (box.checked) {
+            checked++;
+            if (tr) tr.setAttribute('data-state', 'active');
+          } else if (tr) {
+            tr.removeAttribute('data-state');
+          }
+        });
+
+        each(document.querySelectorAll('[data-select-count]'), function (el) {
+          el.textContent = checked;
+        });
+
+        if (bulkbar) bulkbar.hidden = checked === 0;
+
+        if (selectAll) {
+          selectAll.checked = boxes.length > 0 && checked === boxes.length;
+          selectAll.indeterminate = checked > 0 && checked < boxes.length;
         }
-      });
-
-      each(document.querySelectorAll('[data-select-count]'), function (el) {
-        el.textContent = checked;
-      });
-
-      if (bulkbar) bulkbar.hidden = checked === 0;
+      }
 
       if (selectAll) {
-        selectAll.checked = boxes.length > 0 && checked === boxes.length;
-        selectAll.indeterminate = checked > 0 && checked < boxes.length;
-      }
-    }
-
-    if (selectAll) {
-      selectAll.addEventListener('change', function () {
-        each(rows(), function (box) {
-          box.checked = selectAll.checked;
+        selectAll.addEventListener('change', function () {
+          each(rows(), function (box) {
+            box.checked = selectAll.checked;
+          });
+          sync();
         });
-        sync();
+      }
+
+      root.addEventListener('change', function (event) {
+        if (event.target.matches('[data-select-row]')) sync();
       });
+
+      sync();
     }
 
-    root.addEventListener('change', function (event) {
-      if (event.target.matches('[data-select-row]')) sync();
-    });
-
-    sync();
+    each(document.querySelectorAll('[data-table-select]'), setup);
   }
 
-  each(document.querySelectorAll('[data-table-select]'), setup);
+  if (document.readyState !== "loading") initTableSelect();
+  else document.addEventListener("DOMContentLoaded", initTableSelect);
+
+  document.addEventListener("livewire:navigated", initTableSelect);
 
   // Generic dialog-fill (page-wide, attached once).
   document.addEventListener('click', function (event) {

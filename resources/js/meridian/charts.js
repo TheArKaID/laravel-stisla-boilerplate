@@ -462,40 +462,56 @@
     };
   }
 
-  mount(document.querySelector("#salesChart"), salesOptions);
-  mount(document.querySelector("#fulfillmentChart"), fulfillmentOptions);
-  mount(document.querySelector("#heatmapChart"), heatmapOptions, {
-    rebuild: true,
-  });
-  mount(document.querySelector("#revenueChart"), revenueOptions);
-  mount(document.querySelector("#categoryChart"), categoryOptions);
-  mount(document.querySelector("#topProductsChart"), topProductsOptions);
-  mount(document.querySelector("#channelChart"), channelOptions);
+  function initCharts() {
+    var salesEl = document.querySelector("#salesChart");
+    if (!salesEl) return;
 
-  [
-    {
-      id: "sparkBalance",
-      name: "Balance",
-      color: "--color-primary",
-      data: [120, 134, 126, 150, 142, 166, 173, 187],
-      tip: function (v) {
-        return "$" + v + "k";
-      },
-    },
-    {
-      id: "sparkSales",
-      name: "Units sold",
-      color: "--color-success",
-      data: [3600, 3900, 3400, 4200, 3800, 4500, 4400, 4732],
-      tip: function (v) {
-        return v.toLocaleString();
-      },
-    },
-  ].forEach(function (hero) {
-    mount(document.getElementById(hero.id), function () {
-      return heroOptions(hero);
+    live = [];
+
+    mount(salesEl, salesOptions);
+    mount(document.querySelector("#fulfillmentChart"), fulfillmentOptions);
+    mount(document.querySelector("#heatmapChart"), heatmapOptions, {
+      rebuild: true,
     });
-  });
+    mount(document.querySelector("#revenueChart"), revenueOptions);
+    mount(document.querySelector("#categoryChart"), categoryOptions);
+    mount(document.querySelector("#topProductsChart"), topProductsOptions);
+    mount(document.querySelector("#channelChart"), channelOptions);
+
+    [
+      {
+        id: "sparkBalance",
+        name: "Balance",
+        color: "--color-primary",
+        data: [120, 134, 126, 150, 142, 166, 173, 187],
+        tip: function (v) {
+          return "$" + v + "k";
+        },
+      },
+      {
+        id: "sparkSales",
+        name: "Units sold",
+        color: "--color-success",
+        data: [3600, 3900, 3400, 4200, 3800, 4500, 4400, 4732],
+        tip: function (v) {
+          return v.toLocaleString();
+        },
+      },
+    ].forEach(function (hero) {
+      var el = document.getElementById(hero.id);
+      if (el) {
+        el.innerHTML = '';
+        mount(el, function () {
+          return heroOptions(hero);
+        });
+      }
+    });
+  }
+
+  if (document.readyState !== "loading") initCharts();
+  else document.addEventListener("DOMContentLoaded", initCharts);
+
+  document.addEventListener("livewire:navigated", initCharts);
 
   window.addEventListener("stisla:themechange", function () {
     live.forEach(function (entry) {
