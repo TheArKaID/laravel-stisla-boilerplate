@@ -1,14 +1,17 @@
-@extends('layouts.app')
+<?php
 
-@section('title', 'Dashboard')
+use Livewire\Component;
 
-@section('main')
+new class extends Component
+{
+    //
+};
+?>
+
 <div class="page content">
   <div class="content__container">
     <header class="page__header">
-      <h1 class="page__title">
-        Welcome back, <span>Steven</span> 👋
-      </h1>
+      <h1 class="page__title">Welcome back, <span>Steven</span> 👋</h1>
     </header>
     <div class="page__body">
       <section class="page__section">
@@ -21,11 +24,9 @@
                 <div class="stat">
                   <div class="stat__value">59</div>
                   <div class="stat__meta">
-                    <span class="stat__label text-eyebrow">
-                      Total Orders · This Month
-                    </span>
-                    <span class="badge badge--soft badge--success">
-                      <svg
+                    <span class="stat__label text-eyebrow">Total Orders · This Month</span>
+                    <span class="badge badge--soft badge--success"
+                      ><svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="1em"
                         height="1em"
@@ -41,25 +42,16 @@
                           d="m19 15l-7-6l-7 6"
                         />
                       </svg>
-                      11%
-                    </span>
+                      11%</span
+                    >
                   </div>
                 </div>
 
                 <div class="meter meter--block meter--lg meter--stat">
                   <div class="meter__track">
-                    <span
-                      class="meter__bar meter__bar--warning"
-                      style="width: 41%"
-                    ></span>
-                    <span
-                      class="meter__bar meter__bar--primary"
-                      style="width: 20%"
-                    ></span>
-                    <span
-                      class="meter__bar meter__bar--success"
-                      style="width: 39%"
-                    ></span>
+                    <span class="meter__bar meter__bar--warning" style="width: 41%"></span>
+                    <span class="meter__bar meter__bar--primary" style="width: 20%"></span>
+                    <span class="meter__bar meter__bar--success" style="width: 39%"></span>
                   </div>
                 </div>
 
@@ -99,8 +91,8 @@
             <div class="card card--stat">
               <div class="card__body">
                 <div class="flex justify-between items-center">
-                  <span class="icon-box icon-box--primary icon-box--lg">
-                    <svg
+                  <span class="icon-box icon-box--primary icon-box--lg"
+                    ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="1em"
                       height="1em"
@@ -113,11 +105,10 @@
                           stroke-linecap="round"
                           d="M12 17v1m0-12v1m3 2.5C15 8.12 13.657 7 12 7S9 8.12 9 9.5s1.343 2.5 3 2.5s3 1.12 3 2.5s-1.343 2.5-3 2.5s-3-1.12-3-2.5"
                         />
-                      </g>
-                    </svg>
-                  </span>
-                  <span class="badge badge--soft badge--success">
-                    <svg
+                      </g></svg
+                  ></span>
+                  <span class="badge badge--soft badge--success"
+                    ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="1em"
                       height="1em"
@@ -133,13 +124,11 @@
                         d="m19 15l-7-6l-7 6"
                       />
                     </svg>
-                    8.2%
-                  </span>
+                    8.2%</span
+                  >
                 </div>
                 <div class="stat">
-                  <div class="stat__value">
-                    <span class="stat__unit">$</span>187,130
-                  </div>
+                  <div class="stat__value"><span class="stat__unit">$</span>187,130</div>
                   <div class="stat__label text-eyebrow">Available Balance</div>
                 </div>
                 <div id="sparkBalance" class="sparkline sparkline--hero"></div>
@@ -151,8 +140,8 @@
             <div class="card card--stat">
               <div class="card__body">
                 <div class="flex justify-between items-center">
-                  <span class="icon-box icon-box--success icon-box--lg">
-                    <svg
+                  <span class="icon-box icon-box--success icon-box--lg"
+                    ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="1em"
                       height="1em"
@@ -173,11 +162,10 @@
                           stroke-width="1.5"
                           d="M9 6V5a3 3 0 1 1 6 0v1"
                         />
-                      </g>
-                    </svg>
-                  </span>
-                  <span class="badge badge--soft badge--success">
-                    <svg
+                      </g></svg
+                  ></span>
+                  <span class="badge badge--soft badge--success"
+                    ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="1em"
                       height="1em"
@@ -193,8 +181,8 @@
                         d="m19 15l-7-6l-7 6"
                       />
                     </svg>
-                    23%
-                  </span>
+                    23%</span
+                  >
                 </div>
                 <div class="stat">
                   <div class="stat__value">4,732</div>
@@ -276,7 +264,9 @@
                         aria-hidden="true"
                       >
                         <g fill="none" stroke="currentColor" stroke-width="1.5">
-                          <path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z" />
+                          <path
+                            d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"
+                          />
                           <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -326,7 +316,9 @@
                         aria-hidden="true"
                       >
                         <g fill="none" stroke="currentColor" stroke-width="1.5">
-                          <path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z" />
+                          <path
+                            d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"
+                          />
                           <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -375,7 +367,9 @@
                         aria-hidden="true"
                       >
                         <g fill="none" stroke="currentColor" stroke-width="1.5">
-                          <path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z" />
+                          <path
+                            d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"
+                          />
                           <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -427,7 +421,9 @@
                         aria-hidden="true"
                       >
                         <g fill="none" stroke="currentColor" stroke-width="1.5">
-                          <path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z" />
+                          <path
+                            d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"
+                          />
                           <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -458,14 +454,7 @@
                       fill="currentColor"
                       aria-hidden="true"
                     >
-                      <rect
-                        x="3"
-                        y="3"
-                        width="11"
-                        height="11"
-                        rx="2.5"
-                        opacity=".55"
-                      />
+                      <rect x="3" y="3" width="11" height="11" rx="2.5" opacity=".55" />
                       <rect x="10" y="10" width="11" height="11" rx="2.5" />
                     </svg>
                   </span>
@@ -484,7 +473,9 @@
                         aria-hidden="true"
                       >
                         <g fill="none" stroke="currentColor" stroke-width="1.5">
-                          <path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z" />
+                          <path
+                            d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"
+                          />
                           <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -536,7 +527,9 @@
                         aria-hidden="true"
                       >
                         <g fill="none" stroke="currentColor" stroke-width="1.5">
-                          <path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z" />
+                          <path
+                            d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"
+                          />
                           <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -550,12 +543,9 @@
                 </div>
               </div>
               <div class="card__footer">
-                <a
-                  href="#"
-                  class="button button--block button--outline button--neutral"
+                <a href="#" class="button button--block button--outline button--neutral"
+                  >View All</a
                 >
-                  View All
-                </a>
               </div>
             </div>
           </div>
@@ -572,15 +562,9 @@
               <div class="card__body gap-5">
                 <div class="meter">
                   <span class="meter__label">Sessions</span>
-                  <span class="meter__value text-foreground font-medium">
-                    {" "}
-                    18,420{" "}
-                  </span>
+                  <span class="meter__value text-foreground font-medium"> 18,420 </span>
                   <div class="meter__track">
-                    <span
-                      class="meter__bar meter__bar--primary"
-                      style="width: 100%"
-                    ></span>
+                    <span class="meter__bar meter__bar--primary" style="width: 100%"></span>
                   </div>
                 </div>
 
@@ -591,10 +575,7 @@
                     <span class="text-xs text-muted-foreground">-34%</span>
                   </span>
                   <div class="meter__track">
-                    <span
-                      class="meter__bar meter__bar--primary"
-                      style="width: 66%"
-                    ></span>
+                    <span class="meter__bar meter__bar--primary" style="width: 66%"></span>
                   </div>
                 </div>
 
@@ -605,10 +586,7 @@
                     <span class="text-xs text-muted-foreground">-40%</span>
                   </span>
                   <div class="meter__track">
-                    <span
-                      class="meter__bar meter__bar--primary"
-                      style="width: 39%"
-                    ></span>
+                    <span class="meter__bar meter__bar--primary" style="width: 39%"></span>
                   </div>
                 </div>
 
@@ -619,10 +597,7 @@
                     <span class="text-xs text-muted-foreground">-45%</span>
                   </span>
                   <div class="meter__track">
-                    <span
-                      class="meter__bar meter__bar--primary"
-                      style="width: 22%"
-                    ></span>
+                    <span class="meter__bar meter__bar--primary" style="width: 22%"></span>
                   </div>
                 </div>
 
@@ -633,10 +608,7 @@
                     <span class="text-xs text-muted-foreground">-27%</span>
                   </span>
                   <div class="meter__track">
-                    <span
-                      class="meter__bar meter__bar--primary"
-                      style="width: 16%"
-                    ></span>
+                    <span class="meter__bar meter__bar--primary" style="width: 16%"></span>
                   </div>
                 </div>
 
@@ -647,10 +619,7 @@
                     <span class="text-xs text-muted-foreground">-26%</span>
                   </span>
                   <div class="meter__track">
-                    <span
-                      class="meter__bar meter__bar--primary"
-                      style="width: 12%"
-                    ></span>
+                    <span class="meter__bar meter__bar--primary" style="width: 12%"></span>
                   </div>
                 </div>
               </div>
@@ -686,9 +655,7 @@
               <div class="card__body">
                 <div class="flex items-center">
                   <span class="text-lg font-light">Fri · 6PM</span>
-                  <span class="text-xs text-muted-foreground ms-2">
-                    Peak window
-                  </span>
+                  <span class="text-xs text-muted-foreground ms-2">Peak window</span>
                 </div>
                 <div id="heatmapChart" class="chart"></div>
                 <div class="heatmap-legend">
@@ -734,9 +701,7 @@
                   <li class="timeline__item">
                     <span class="timeline__marker timeline__marker--warning"></span>
                     <div class="timeline__body">
-                      <div class="timeline__title">
-                        Low stock alert · Ion Membrane Pack
-                      </div>
+                      <div class="timeline__title">Low stock alert · Ion Membrane Pack</div>
                       <div class="timeline__time">22 min ago</div>
                     </div>
                   </li>
@@ -754,9 +719,7 @@
                   <li class="timeline__item">
                     <span class="timeline__marker timeline__marker--primary"></span>
                     <div class="timeline__body">
-                      <div class="timeline__title">
-                        New customer · Globex onboarded
-                      </div>
+                      <div class="timeline__title">New customer · Globex onboarded</div>
                       <div class="timeline__time">1 hr ago</div>
                     </div>
                   </li>
@@ -774,9 +737,8 @@
             <a
               href="#"
               class="ms-auto button button--neutral button--ghost button--sm"
+              >View all</a
             >
-              View all
-            </a>
           </div>
 
           <div class="table-responsive">
@@ -786,28 +748,21 @@
                   <th scope="col">Order</th>
                   <th scope="col">Customer</th>
                   <th scope="col">Date</th>
-                  <th scope="col" class="text-end">
-                    Items
-                  </th>
+                  <th scope="col" class="text-end">Items</th>
                   <th scope="col">Status</th>
-                  <th scope="col" class="text-end">
-                    Total
-                  </th>
+                  <th scope="col" class="text-end">Total</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th scope="row">
-                    <a href="#" class="link">
-                      <code>#10428</code>
-                    </a>
+                    <a href="#" class="link"
+                      ><code>#10428</code></a
+                    >
                   </th>
                   <td>
                     <div class="flex items-center gap-3">
-                      <span
-                        class="avatar avatar--sm avatar--circle"
-                        data-stisla-avatar
-                      >
+                      <span class="avatar avatar--sm avatar--circle" data-stisla-avatar>
                         <img
                           class="avatar__image"
                           src="https://i.pravatar.cc/64?img=12"
@@ -817,17 +772,15 @@
                       </span>
                       <div>
                         <div class="font-medium">Acme Corp</div>
-                        <div class="text-xs text-muted-foreground">
-                          billing@acme.co
-                        </div>
+                        <div class="text-xs text-muted-foreground">billing@acme.co</div>
                       </div>
                     </div>
                   </td>
                   <td>Jun 18</td>
                   <td class="text-end">6</td>
                   <td>
-                    <span class="badge badge--soft badge--warning">
-                      <svg
+                    <span class="badge badge--soft badge--warning"
+                      ><svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="1em"
                         height="1em"
@@ -843,26 +796,21 @@
                           />
                         </g>
                       </svg>
-                      Pending
-                    </span>
+                      Pending</span
+                    >
                   </td>
-                  <td class="text-end">
-                    <span class="font-semibold">$1,490.00</span>
-                  </td>
+                  <td class="text-end"><span class="font-semibold">$1,490.00</span></td>
                 </tr>
 
                 <tr>
                   <th scope="row">
-                    <a href="#" class="link">
-                      <code>#10427</code>
-                    </a>
+                    <a href="#" class="link"
+                      ><code>#10427</code></a
+                    >
                   </th>
                   <td>
                     <div class="flex items-center gap-3">
-                      <span
-                        class="avatar avatar--sm avatar--circle"
-                        data-stisla-avatar
-                      >
+                      <span class="avatar avatar--sm avatar--circle" data-stisla-avatar>
                         <img
                           class="avatar__image"
                           src="https://i.pravatar.cc/64?img=32"
@@ -872,17 +820,15 @@
                       </span>
                       <div>
                         <div class="font-medium">Riverway Ltd</div>
-                        <div class="text-xs text-muted-foreground">
-                          ap@riverway.io
-                        </div>
+                        <div class="text-xs text-muted-foreground">ap@riverway.io</div>
                       </div>
                     </div>
                   </td>
                   <td>Jun 17</td>
                   <td class="text-end">2</td>
                   <td>
-                    <span class="badge badge--soft badge--info">
-                      <svg
+                    <span class="badge badge--soft badge--info"
+                      ><svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="1em"
                         height="1em"
@@ -901,26 +847,21 @@
                           />
                         </g>
                       </svg>
-                      Shipped
-                    </span>
+                      Shipped</span
+                    >
                   </td>
-                  <td class="text-end">
-                    <span class="font-semibold">$580.00</span>
-                  </td>
+                  <td class="text-end"><span class="font-semibold">$580.00</span></td>
                 </tr>
 
                 <tr>
                   <th scope="row">
-                    <a href="#" class="link">
-                      <code>#10426</code>
-                    </a>
+                    <a href="#" class="link"
+                      ><code>#10426</code></a
+                    >
                   </th>
                   <td>
                     <div class="flex items-center gap-3">
-                      <span
-                        class="avatar avatar--sm avatar--circle"
-                        data-stisla-avatar
-                      >
+                      <span class="avatar avatar--sm avatar--circle" data-stisla-avatar>
                         <img
                           class="avatar__image"
                           src="https://i.pravatar.cc/64?img=48"
@@ -939,8 +880,8 @@
                   <td>Jun 17</td>
                   <td class="text-end">18</td>
                   <td>
-                    <span class="badge badge--soft badge--success">
-                      <svg
+                    <span class="badge badge--soft badge--success"
+                      ><svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="1em"
                         height="1em"
@@ -956,26 +897,21 @@
                           />
                         </g>
                       </svg>
-                      Completed
-                    </span>
+                      Completed</span
+                    >
                   </td>
-                  <td class="text-end">
-                    <span class="font-semibold">$8,200.00</span>
-                  </td>
+                  <td class="text-end"><span class="font-semibold">$8,200.00</span></td>
                 </tr>
 
                 <tr>
                   <th scope="row">
-                    <a href="#" class="link">
-                      <code>#10425</code>
-                    </a>
+                    <a href="#" class="link"
+                      ><code>#10425</code></a
+                    >
                   </th>
                   <td>
                     <div class="flex items-center gap-3">
-                      <span
-                        class="avatar avatar--sm avatar--circle"
-                        data-stisla-avatar
-                      >
+                      <span class="avatar avatar--sm avatar--circle" data-stisla-avatar>
                         <img
                           class="avatar__image"
                           src="https://i.pravatar.cc/64?img=15"
@@ -985,17 +921,15 @@
                       </span>
                       <div>
                         <div class="font-medium">Globex</div>
-                        <div class="text-xs text-muted-foreground">
-                          buy@globex.com
-                        </div>
+                        <div class="text-xs text-muted-foreground">buy@globex.com</div>
                       </div>
                     </div>
                   </td>
                   <td>Jun 16</td>
                   <td class="text-end">1</td>
                   <td>
-                    <span class="badge badge--soft badge--danger">
-                      <svg
+                    <span class="badge badge--soft badge--danger"
+                      ><svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="1em"
                         height="1em"
@@ -1007,26 +941,21 @@
                           d="M3.68 11.333h-.75zm0 1.667l-.528.532a.75.75 0 0 0 1.056 0zm2.208-1.134A.75.75 0 1 0 4.83 10.8zM2.528 10.8a.75.75 0 0 0-1.056 1.065zm16.088-3.408a.75.75 0 1 0 1.277-.786zM12.079 2.25c-5.047 0-9.15 4.061-9.15 9.083h1.5c0-4.182 3.42-7.583 7.65-7.583zm-9.15 9.083V13h1.5v-1.667zm1.28 2.2l1.679-1.667L4.83 10.8l-1.68 1.667zm0-1.065L2.528 10.8l-1.057 1.065l1.68 1.666zm15.684-5.86A9.16 9.16 0 0 0 12.08 2.25v1.5a7.66 7.66 0 0 1 6.537 3.643zM20.314 11l.527-.533a.75.75 0 0 0-1.054 0zM18.1 12.133a.75.75 0 0 0 1.055 1.067zm3.373 1.067a.75.75 0 1 0 1.054-1.067zM5.318 16.606a.75.75 0 1 0-1.277.788zm6.565 5.144c5.062 0 9.18-4.058 9.18-9.083h-1.5c0 4.18-3.43 7.583-7.68 7.583zm9.18-9.083V11h-1.5v1.667zm-1.276-2.2L18.1 12.133l1.055 1.067l1.686-1.667zm0 1.066l1.686 1.667l1.054-1.067l-1.686-1.666zM4.04 17.393a9.2 9.2 0 0 0 7.842 4.357v-1.5a7.7 7.7 0 0 1-6.565-3.644z"
                         />
                       </svg>
-                      Refunded
-                    </span>
+                      Refunded</span
+                    >
                   </td>
-                  <td class="text-end">
-                    <span class="font-semibold">$240.00</span>
-                  </td>
+                  <td class="text-end"><span class="font-semibold">$240.00</span></td>
                 </tr>
 
                 <tr>
                   <th scope="row">
-                    <a href="#" class="link">
-                      <code>#10424</code>
-                    </a>
+                    <a href="#" class="link"
+                      ><code>#10424</code></a
+                    >
                   </th>
                   <td>
                     <div class="flex items-center gap-3">
-                      <span
-                        class="avatar avatar--sm avatar--circle"
-                        data-stisla-avatar
-                      >
+                      <span class="avatar avatar--sm avatar--circle" data-stisla-avatar>
                         <img
                           class="avatar__image"
                           src="https://i.pravatar.cc/64?img=5"
@@ -1036,17 +965,15 @@
                       </span>
                       <div>
                         <div class="font-medium">Initech</div>
-                        <div class="text-xs text-muted-foreground">
-                          po@initech.com
-                        </div>
+                        <div class="text-xs text-muted-foreground">po@initech.com</div>
                       </div>
                     </div>
                   </td>
                   <td>Jun 15</td>
                   <td class="text-end">4</td>
                   <td>
-                    <span class="badge badge--soft badge--success">
-                      <svg
+                    <span class="badge badge--soft badge--success"
+                      ><svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="1em"
                         height="1em"
@@ -1062,12 +989,10 @@
                           />
                         </g>
                       </svg>
-                      Completed
-                    </span>
+                      Completed</span
+                    >
                   </td>
-                  <td class="text-end">
-                    <span class="font-semibold">$1,120.00</span>
-                  </td>
+                  <td class="text-end"><span class="font-semibold">$1,120.00</span></td>
                 </tr>
               </tbody>
             </table>
@@ -1077,8 +1002,3 @@
     </div>
   </div>
 </div>
-@endsection
-
-@push('scripts')
-    <!-- JS -->
-@endpush

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
 
     @stack('styles')
+    @livewireStyles
 
     <!-- Load ApexCharts before JS scripts so charts.js can see window.ApexCharts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts@3"></script>
@@ -35,11 +36,16 @@
         <main class="app-shell__main">
             @include('components.header')
 
-            @yield('main')
+            @if(isset($slot))
+                {{ $slot }}
+            @else
+                @yield('main')
+            @endif
         </main>
     </div>
 
     @stack('scripts')
+    @livewireScripts
 </body>
 
 </html>
